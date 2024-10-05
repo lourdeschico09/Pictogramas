@@ -1,0 +1,58 @@
+[
+    {
+        "categoria":"REGLAS DE CONVIVENCIA",
+        "pregunta":"¡NECESITO IR AL BAÑO! ¿QUE DEBO HACER PARA SEGUIR LAS REGLAS DE CONVIVENCIA?",
+        "respuesta": "img/picto.png",
+        "incorrecta1":"img/sin.png",
+        "incorrecta2":"img/esperar.png",
+        "imagen":"https://img.freepik.com/vector-premium/profesor-dibujos-animados-ninos-escuela-alumnos-sentados-escritorios-ilustracion-vector-aula_461812-755.jpg",
+        "objectFit":"cover"
+    },
+
+    {
+        "categoria":"REGLAS DE CONVIVENCIA",
+        "pregunta":"SI VEO QUE UN COMPAÑERO SE SIENTE TRISTE, ¿QUE DEBO HACER?",
+        "respuesta":"img/preguntar.png",
+        "incorrecta1":"img/ignorar.png",
+        "incorrecta2":"img/broma.png",
+        "imagen":"https://img.freepik.com/foto-gratis/retrato-joven-estudiante-triste-que-es-intimidado-escuela_23-2151395661.jpg",
+        "objectFit":"cover"
+    },
+
+    {
+        "categoria":"REGLAS DE CONVIVENCIA",
+        "pregunta":"CUANDO ESTOY EN CLASES Y EL MAESTRO ESTA HABLANDO, ¿QUE DEBO HACER PARA SEGUIR LAS REGLAS DE CONVIVENCIA?",
+        "respuesta":"img/aten.png",
+        "incorrecta1":"img/amig.png",
+        "incorrecta2":"img/jugue.png",
+        "imagen":"https://st2.depositphotos.com/1526816/50202/v/950/depositphotos_502027954-stock-illustration-teacher-talking-students-classroom-scene.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria":"REGLAS DE CONVIVENCIA",
+        "pregunta":"SI ESTOY JUGANDO Y UN AMIGO QUIERE UNIRSE, ¿QUE DEBO HACER?",
+        "respuesta":"img/invi.png",
+        "incorrecta1":"img/ignorarlo.png",
+        "incorrecta2":"img/decir.png",
+        "imagen":"img/inclu.png",
+        "objectFit":"cover"
+    },
+    {
+        "categoria":"REGLAS DE CONVIVENCIA",
+        "pregunta":"SI ACCIDENTALMENTE ROMPO UN JUGUETE, ¿QUE DEBO HACER PARA SEGUIR LAS REGLAS DE CONVIVENCIA?",
+        "respuesta":"img/adulto.png",
+        "incorrecta1":"img/esconde.png",
+        "incorrecta2":"img/romper.png",
+        "imagen":"https://www.shutterstock.com/image-illustration/boy-throw-his-toy-600nw-575182810.jpg",
+        "objectFit":"cover"
+    },
+    {
+        "categoria":"REGLAS DE CONVIVENCIA",
+        "pregunta":"CUANDO TERMINO DE USAR UN MATERIAL, ¿QUE DEBO HACER PARA SEGUIR LAS REGLAS DE CONVIVENCIA?",
+        "respuesta":"img/guardar.png",
+        "incorrecta1":"img/tirar.png",
+        "incorrecta2":"img/darlo.png",
+        "imagen":"https://www.shutterstock.com/image-illustration/boy-throw-his-toy-600nw-575182810.jpg",
+        "objectFit":"cover"
+    }
+]

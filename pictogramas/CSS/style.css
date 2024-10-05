@@ -1,0 +1,110 @@
+.emociones {
+  font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fuente amigable para niños */
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.text-content {
+  text-align: left;
+}
+
+.text-content p {
+  margin: 0;
+  font-size: 2.5em;
+  color: #333;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fbfcfc;
+}
+
+/* Header */
+.header {
+  height: auto; /* Cambia a auto para que se ajuste al contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px; /* Agrega padding para separar el contenido de los bordes */
+}
+
+.text {
+  font-family: Jost, sans-serif;
+  font-weight: bold;
+  font-size: 6vw; /* Escala bien en pantallas grandes */
+  background-image: linear-gradient(var(--angle), hotpink, indigo);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 4s linear alternate infinite;
+  margin: 0; /* Elimina el margen superior para que esté centrado */
+}
+
+/* Navbar */
+.navbar {
+  justify-content: center; /* Centra el navbar */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Asegura que los elementos se centren */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.navbar-nav .nav-link {
+  font-size: 30px;
+  transition: font-size 0.3s ease;
+  color: #740420;
+  font-family: Jost, sans-serif;
+  padding: 10px 15px; /* Espaciado entre los enlaces */
+}
+
+.nav-item.divider {
+  color: #333;
+  padding: 0 5px; /* Reduce el espaciado lateral del divisor */
+}

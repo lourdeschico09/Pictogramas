@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, main, header, footer, .menu__cuentos, ul,li, aside{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fbfcfc;
+}
+
+
+  .navbar-nav .nav-link {
+    font-size: 30px;
+    transition: font-size 0.3s ease;
+    color: #740420;
+    font-family: Jost, sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 40px; 
+}
+
+.nav-item.divider {
+    color: #333;
+    padding: 0 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.nav-item.divider::before {
+    content: '|'; 
+    color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    height: 100vh; /* Hace que el header ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.text {
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 6vw; /* Escala bien en pantallas grandes */
+    background-image: linear-gradient(var(--angle), hotpink, indigo);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 4s linear alternate infinite;
+    margin-top: 1em;
+}
+
+/* Animación para el gradiente */
+@keyframes move {
+    0% { --angle: 0.25turn; }
+    100% { --angle: 0.75turn; }
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .text {
+        font-size: 8vw; /* Aumenta el tamaño en pantallas medianas */
+    }
+}
+
+/* Media query para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    .text {
+        font-size: 10vw; /* Ajuste adicional en smartphones */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (dispositivos muy pequeños) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 12vw; /* Tamaño más grande en pantallas muy pequeñas */
+    }
+}
+/*---------- Menu CUENTOS --------------*/
+
+.menu__cuentos{
+    padding: 12px;
+    margin: auto;
+    min-height: 80vh;
+    text-align: center;
+    container-name: menuCuentos;
+    container-type: inline-size;
+}
+
+.menu__cuentos h2{
+    text-wrap: balance;
+    margin: 20px 0;
+}
+
+.menu__cuentos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Una columna por defecto */
+    gap: 12px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 60vh;
+    padding: 10px;
+    margin: auto;
+}
+
+.menu__cuentos--items:last-child{
+    align-self: center;
+}
+
+/*--------- MENU CUENTOS ENDS -----------*/
+
+/*--------- MENU CUENTOS QUERIES -----------*/
+@container menuCuentos (min-width: 500px){
+
+    .menu__cuentos h2{
+        text-wrap: balance;
+        margin: 40px 0;
+        text-align: center;
+        font-size: 40px;
+    }
+    
+
+    .menu__cuentos-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 150px;
+        grid-template-areas: 
+        "cuento1 cuento2"
+        "boton boton";
+    }
+
+    .menu__cuentos--items button{
+        width: 100%;
+        padding: 25px;
+        font-size: 20px;
+    }
+
+    .menu__cuentos--items{
+        justify-self: center;
+    }
+    .menu__cuentos--items:first-child{
+        grid-area: cuento1;
+    }
+    .menu__cuentos--items:nth-child(2){
+        grid-area: cuento2;
+    }
+    .menu__cuentos--items:last-child{
+        grid-area: boton;
+        width: 400px;
+    }
+}
+/*--------- MENU CUENTOS QUERIES ENDS -----------*/
+
+
+
+button{
+    border-radius: 4px;
+    padding: 12251px;
+    border: none;
+    background-color: #b1b0b0;
+    border-radius: 12px;
+}
+
+.button__backmenu:hover{
+    background-color: #b1b0b099;
+}
+
+
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer{
+    background-color: #7a7979;
+    padding: 30px;
+}
+
+@media screen and  (min-width: 600px){
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #6669;
+        border-radius: 12px;
+    }
+
+    .logo{
+        font-size: 35px;
+    }
+
+    .nav__item a{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.card:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+}

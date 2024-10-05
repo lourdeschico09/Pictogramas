@@ -1,0 +1,129 @@
+body {
+
+    background-color: #f4f4f461;
+    color: #333;
+  }
+  header{
+    background-color: darkgrey;
+  }
+  a {
+    text-decoration: none; 
+    color: #00540f; 
+}
+.navbar-nav .nav-link {
+    font-size: 30px;
+    transition: font-size 0.3s ease;
+    color: #740420;
+    font-family: Jost, sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 40px; 
+}
+
+.nav-item.divider {
+    color: #333;
+    padding: 0 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.nav-item.divider::before {
+    content: '|'; 
+    color: #333;
+}
+
+
+a:hover {
+    color: #3da51d; 
+}
+  h1 {
+    color: #2c3e50;
+  }
+  h5{
+    color: rgb(255, 255, 255);
+  }
+  h2{
+    color: #0e7404;
+    font-family: Jost, sans-serif;
+  }
+  .section img, .row img {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+}
+  .carousel-item img {
+    object-fit: cover; 
+    max-height: 400px; 
+    width: auto; 
+    margin: auto;
+    
+  }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+  .section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .section p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .text {
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 6vw; /* Escala bien en pantallas grandes */
+    background-image: linear-gradient(var(--angle), hotpink, indigo);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: move 4s linear alternate infinite;
+    margin-top: 1em;
+}
+
+/* Animación para el gradiente */
+@keyframes move {
+    0% { --angle: 0.25turn; }
+    100% { --angle: 0.75turn; }
+}
+
+/* Propiedad personalizada --angle */
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0turn;
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .text {
+        font-size: 8vw; /* Aumenta el tamaño en pantallas medianas */
+    }
+}
+
+/* Media query para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    .text {
+        font-size: 10vw; /* Ajuste adicional en smartphones */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (dispositivos muy pequeños) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 12vw; /* Tamaño más grande en pantallas muy pequeñas */
+    }
+}

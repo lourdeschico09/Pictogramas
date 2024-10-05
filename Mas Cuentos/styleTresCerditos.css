@@ -1,0 +1,1939 @@
+*{
+    margin:0;
+    font-family: sans-serif;
+}
+.navbar-nav .nav-link {
+    font-size: 30px;
+    transition: font-size 0.3s ease;
+    color: #740420;
+    font-family: Jost, sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 40px; 
+}
+
+.nav-item.divider {
+    color: #333;
+    padding: 0 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.nav-item.divider::before {
+    content: '|'; 
+    color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    height: 100vh; /* Hace que el header ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.text {
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 6vw; /* Escala bien en pantallas grandes */
+    background-image: linear-gradient(var(--angle), hotpink, indigo);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 4s linear alternate infinite;
+    margin-top: 1em;
+}
+
+/* Animación para el gradiente */
+@keyframes move {
+    0% { --angle: 0.25turn; }
+    100% { --angle: 0.75turn; }
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .text {
+        font-size: 8vw; /* Aumenta el tamaño en pantallas medianas */
+    }
+}
+
+/* Media query para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    .text {
+        font-size: 10vw; /* Ajuste adicional en smartphones */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (dispositivos muy pequeños) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 12vw; /* Tamaño más grande en pantallas muy pequeñas */
+    }
+}
+
+
+body, .header, .main, .footer, div, ul, li, a{
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #fbfcfc;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.header{
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6669;
+    border-radius: 12px;
+}
+
+.edit_logo{
+    color: #3498db;
+}
+.edit_logo-2{
+    color: #444;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.header nav{
+    margin-top: 12px;
+}
+
+.nav__item{
+    transition: background-color 0.3s, border-radius 0.24s;
+}
+
+.nav__item:hover{
+
+    background-color:#3498db33 ;
+    border-radius: 4px;
+    padding: 4px;
+
+}
+
+header a{
+    text-decoration: none;
+    color: #78b8ec;
+}
+
+header ul{
+    padding: 0;
+}
+
+.main{
+    flex-grow: 1;
+    text-align: center;
+    background-color: #eee;
+}
+
+#carouselExample{
+    background-color: transparent;
+}
+
+.tres__chanchitos{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.tres__chanchitos h2{
+    font-size: 50px;
+}
+
+/*-------------- PAGE 1 --------------*/
+
+.page1{
+    container-name: pictograma_1;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+
+.tres__chanchitos-pictograma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+
+.tres__chanchitos-pictograma:first-child{
+    height: 300px;
+    width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma:last-child{
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*---------- PAGE 1 QUERIES --------------------*/
+
+@container pictograma_1 (max-width: 600px){
+    .tres__chanchitos-container{
+
+        grid-template-columns: 1fr;
+
+    }
+    
+    
+    .tres__chanchitos-pictograma:first-child{
+        height: 150px;
+        width: 150px;
+
+    }
+    
+    .tres__chanchitos-pictograma:last-child{
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*---------- PAGE 1 QUERIES ENDS ---------------*/
+
+/*---------- PAGE  1 ends ----------------*/
+/*---------- PAGE  2 ----------------*/
+
+.page2{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page2{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page2 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page2:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page2:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page2:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 2 ENDS -------------------*/
+
+/*----------- PAGE 2 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page2{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page2:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page2:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page2:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 2 QUERIES ENDS -------------------*/
+
+/*----------- PAGE 3 -------------------*/
+
+.page3{
+    container-name: pictograma_5;
+    container-type: inline-size;
+}
+
+
+.tres__chanchitos-container--page3{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4 pictograma5"
+    "oracion oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page3{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-container--page3 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page3:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page3:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page3:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page3:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+.tres__chanchitos-pictograma--page3:nth-child(5){
+    grid-area: pictograma5;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page3:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 3 ENDS -----------------*/
+
+/*----------- PAGE 3 QUERIES -----------------*/
+@container pictograma_5 (max-width: 600px){
+    .tres__chanchitos-container--page3{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4"
+        "pictograma5 pictograma5"
+        "oracion oracion"
+        ;
+    }
+    
+    .tres__chanchitos-pictograma--page3:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page3:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page3:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page3:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    .tres__chanchitos-pictograma--page3:nth-child(5){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page3:last-child{
+        grid-area: oracion;
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+
+}
+
+/*----------- PAGE 3 QUERIES ENDS -----------------*/
+
+/*----------- PAGE 4 -------------------*/
+
+.page4{
+    container-name: pictograma_5;
+    container-type: inline-size;
+}
+
+
+.tres__chanchitos-container--page4{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4 pictograma5"
+    "oracion oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page4{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-container--page4 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page4:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page4:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page4:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page4:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+.tres__chanchitos-pictograma--page4:nth-child(5){
+    grid-area: pictograma5;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page4:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 4 ENDS -----------------*/
+
+/*----------- PAGE 4 QUERIES -----------------*/
+@container pictograma_5 (max-width: 600px){
+    .tres__chanchitos-container--page4{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4"
+        "pictograma5 pictograma5"
+        "oracion oracion"
+        ;
+    }
+    
+    .tres__chanchitos-pictograma--page4:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page4:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page4:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page4:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    .tres__chanchitos-pictograma--page4:nth-child(5){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page4:last-child{
+        grid-area: oracion;
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+
+}
+
+/*----------- PAGE 4 QUERIES ENDS -----------------*/
+
+
+/*----------- PAGE 5 ----------------------*/
+
+.page5{
+    container-name: pictograma_6;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page5{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4 pictograma5 pictograma6"
+    "oracion oracion oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page5 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page5:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page5:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page5:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page5:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+.tres__chanchitos-pictograma--page5:nth-child(5){
+    grid-area: pictograma5;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+.tres__chanchitos-pictograma--page5:nth-child(6){
+    grid-area: pictograma6;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page5:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 5 ENDS -----------------*/
+
+/*----------- PAGE 5 QUERIRES -------------*/
+
+@container pictograma_6 (max-width: 600px){
+    .tres__chanchitos-container--page5{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr ;
+        grid-template-areas: 
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4" 
+        "pictograma5 pictograma6"
+        "oracion oracion";
+    }
+    
+    .tres__chanchitos-pictograma--page5:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page5:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page5:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page5:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    .tres__chanchitos-pictograma--page5:nth-child(5){
+        height: 150px;
+        max-width: 150px;
+    }
+    .tres__chanchitos-pictograma--page5:nth-child(6){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page5:last-child{
+        grid-area: oracion;
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+        align-self: center;
+    }
+
+     
+}
+
+/*----------- PAGE 5 QUERIRES ENDS-------------*/
+
+/*---------- PAGE  6 ----------------*/
+
+.page6{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page6{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page6 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page6:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+    justify-self: end;
+}
+
+.tres__chanchitos-pictograma--page6:nth-child(2){
+    grid-area: pictograma2;
+    height: 200px;
+    max-width: 200px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page6:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 6 ENDS -------------------*/
+
+/*----------- PAGE 6 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page6{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page6:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page6:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page6:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 6 QUERIES ENDS -------------------*/
+
+
+/*---------- PAGE  7 ----------------*/
+
+.page7{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page7{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page7 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page7:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+    justify-self: end;
+}
+
+.tres__chanchitos-pictograma--page7:nth-child(2){
+    grid-area: pictograma2;
+    height: 200px;
+    max-width: 200px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page7:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 7 ENDS -------------------*/
+
+/*----------- PAGE 7 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page7{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page7:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page7:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page7:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 7 QUERIES ENDS -------------------*/
+
+/*----------- PAGE 8 -------------------*/
+
+.page8{
+    container-name:pictograma_4;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page8{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4"
+    "oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page8 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page8:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page8:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page8:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page8:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page8:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 8 ENDS -----------------*/
+/*----------- PAGE 8 QUERIES --------------*/
+
+@container pictograma_4 (max-width: 600px){
+    .tres__chanchitos-container--page8{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4"
+        "oracion oracion";
+    }
+    
+    .tres__chanchitos-pictograma--page8:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page8:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page8:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page8:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page8:last-child{
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 8 QUERIES ENDS--------------*/
+/**/
+/*----------- PAGE 9 -------------------*/
+
+.page9{
+    container-name: pictograma_3;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page9{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3"
+    "oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+.tres__chanchitos-pictograma--page9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page9 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page9:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page9:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page9:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page9:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+/*----------- PAGE 9 ENDS -----------------*/
+/*----------- PAGE 9 QUERIES --------------*/
+@container pictograma_3 (max-width: 600px){
+    .tres__chanchitos-container--page9{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1 pictograma2" 
+        "pictograma3 pictograma3"
+        "oracion oracion";
+    }
+    
+    .tres__chanchitos-pictograma--page9:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page9:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page9:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page9:last-child{
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+/*----------- PAGE 9 QUERIES ENDS--------------*/
+
+/*---------- PAGE  10 ----------------*/
+
+.page10{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page10{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page10{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page10 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page10:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+    justify-self: end;
+}
+
+.tres__chanchitos-pictograma--page10:nth-child(2){
+    grid-area: pictograma2;
+    height: 200px;
+    max-width: 200px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page10:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 10 ENDS -------------------*/
+
+/*----------- PAGE 10 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page10{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page10:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page10:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page10:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 10 QUERIES ENDS -------------------*/
+
+
+/*----------- PAGE 11 -------------------*/
+
+.page11{
+    container-name:pictograma_4;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page11{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4"
+    "oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page11{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page11 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page11:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page11:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page11:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page11:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page11:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 11 ENDS -----------------*/
+/*----------- PAGE 11 QUERIES --------------*/
+
+@container pictograma_4 (max-width: 600px){
+    .tres__chanchitos-container--page11{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4"
+        "oracion oracion";
+    }
+    
+    .tres__chanchitos-pictograma--page11:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page11:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page11:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page11:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page11:last-child{
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 11 QUERIES ENDS--------------*/
+
+
+/*----------- PAGE 12 -------------------*/
+
+.page12{
+    container-name:pictograma_4;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page12{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4"
+    "oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page12 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page12:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    justify-self: end;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page12:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    justify-self: start;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page12:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page12:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page12:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 12 ENDS -----------------*/
+/*----------- PAGE 12 QUERIES --------------*/
+
+@container pictograma_4 (max-width: 600px){
+    .tres__chanchitos-container--page12{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4"
+        "oracion oracion";
+    }
+    
+    .tres__chanchitos-pictograma--page12:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+    
+    .tres__chanchitos-pictograma--page12:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+    
+    .tres__chanchitos-pictograma--page12:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page12:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page12:last-child{
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 12 QUERIES ENDS--------------*/
+
+/*---------- PAGE  13 ----------------*/
+
+.page13{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page13{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page13{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page13 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page13:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+    justify-self: end;
+}
+
+.tres__chanchitos-pictograma--page13:nth-child(2){
+    grid-area: pictograma2;
+    height: 200px;
+    max-width: 200px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page13:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 13 ENDS -------------------*/
+
+/*----------- PAGE 13 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page13{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page13:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page13:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page13:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 13 QUERIES ENDS -------------------*/
+
+/*----------- PAGE 14 -------------------*/
+
+.page14{
+    container-name: pictograma_5;
+    container-type: inline-size;
+}
+
+
+.tres__chanchitos-container--page14{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2 pictograma3 pictograma4 pictograma5"
+    "oracion oracion oracion oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page14{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-container--page14 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page14:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page14:nth-child(2){
+    grid-area: pictograma2;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page14:nth-child(3){
+    grid-area: pictograma3;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page14:nth-child(4){
+    grid-area: pictograma4;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+.tres__chanchitos-pictograma--page14:nth-child(5){
+    grid-area: pictograma5;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page14:last-child{
+    grid-area: oracion;
+    height:100px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 14 ENDS -----------------*/
+
+/*----------- PAGE 14 QUERIES -----------------*/
+@container pictograma_5 (max-width: 600px){
+    .tres__chanchitos-container--page14{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "pictograma1 pictograma2"
+        "pictograma3 pictograma4"
+        "pictograma5 pictograma5"
+        "oracion oracion"
+        ;
+    }
+    
+    .tres__chanchitos-pictograma--page14:first-child{
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page14:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page14:nth-child(3){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page14:nth-child(4){
+        height: 150px;
+        max-width: 150px;
+    }
+    .tres__chanchitos-pictograma--page14:nth-child(5){
+        height: 150px;
+        max-width: 150px;
+    }
+    
+    .tres__chanchitos-pictograma--page14:last-child{
+        grid-area: oracion;
+        height:100px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+
+}
+
+/*----------- PAGE 14 QUERIES ENDS -----------------*/
+
+/*---------- PAGE  15 ----------------*/
+
+.page15{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page15{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page15{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page15 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page15:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+    justify-self: end;
+}
+
+.tres__chanchitos-pictograma--page15:nth-child(2){
+    grid-area: pictograma2;
+    height: 200px;
+    max-width: 200px;
+    align-self: center;
+}
+
+.tres__chanchitos-pictograma--page15:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 15 ENDS -------------------*/
+
+/*----------- PAGE 15 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page15{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page15:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page15:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+    }
+
+    .tres__chanchitos-pictograma--page15:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 15 QUERIES ENDS -------------------*/
+/*---------- PAGE  16 ----------------*/
+
+.page16{
+    container-name: pictograma_2;
+    container-type: inline-size;
+}
+
+.tres__chanchitos-container--page16{
+    background-color: #fff;
+    border: 1px solid #0006;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "pictograma1 pictograma2"
+    "oracion oracion";
+    gap: 12px;
+    padding: 20px;
+    min-height: 80vh;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+
+.tres__chanchitos-pictograma--page16{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.tres__chanchitos-pictograma--page16 img{
+    max-width: 100%;
+}
+
+.tres__chanchitos-pictograma--page16:first-child{
+    grid-area: pictograma1;
+    height: 300px;
+    max-width: 300px;
+    align-self: center;
+    justify-self: end;
+}
+
+.tres__chanchitos-pictograma--page16:nth-child(2){
+    grid-area: pictograma2;
+    height: 200px;
+    max-width: 200px;
+    align-self: center;
+    justify-self: start;
+}
+
+.tres__chanchitos-pictograma--page16:last-child{
+    grid-area: oracion;
+    height:50px;
+    font-weight: 600;
+    font-size: 40px;
+    align-self: center;
+}
+
+/*----------- PAGE 16 ENDS -------------------*/
+
+/*----------- PAGE 16 QUERIES -------------------*/
+@container pictograma_2 (max-width: 600px){
+    .tres__chanchitos-container--page16{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "pictograma1" 
+        "pictograma2"
+        "oracion";
+    }
+
+    .tres__chanchitos-pictograma--page16:first-child{
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page16:nth-child(2){
+        height: 150px;
+        max-width: 150px;
+        justify-self: center;
+    }
+
+    .tres__chanchitos-pictograma--page16:last-child{
+        grid-area: oracion;
+        height:50px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+/*----------- PAGE 16 QUERIES ENDS -------------------*/
+
+.footer{
+    background-color: #7a7979;
+    padding: 30px;
+}
+
+@media screen and  (min-width: 600px){
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #6669;
+        border-radius: 12px;
+    }
+
+    .logo{
+        font-size: 35px;
+    }
+
+    .nav__item a{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}

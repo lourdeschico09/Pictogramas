@@ -1,0 +1,494 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, main, .header, .footer, .patitoFeo__container1pictograma, .patitoFeo__container2pictograma, .patitoFeo__container3pictograma{
+    box-sizing: border-box;
+}
+.navbar-nav .nav-link {
+    font-size: 30px;
+    transition: font-size 0.3s ease;
+    color: #740420;
+    font-family: Jost, sans-serif;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 40px; 
+}
+
+.nav-item.divider {
+    color: #333;
+    padding: 0 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.nav-item.divider::before {
+    content: '|'; 
+    color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+/* Header */
+
+.header {
+    height: 100vh; /* Hace quew el header ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.text {
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 6vw; /* Escala bien en pantallas grandes */
+    background-image: linear-gradient(var(--angle), hotpink, indigo);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 4s linear alternate infinite;
+    margin-top: 1em;
+}
+
+/* Animación para el gradiente */
+@keyframes move {
+    0% { --angle: 0.25turn; }
+    100% { --angle: 0.75turn; }
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .text {
+        font-size: 8vw; /* Aumenta el tamaño en pantallas medianas */
+    }
+}
+
+/* Media query para pantallas pequeñas (smartphones) */
+@media (max-width: 768px) {
+    .text {
+        font-size: 10vw; /* Ajuste adicional en smartphones */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (dispositivos muy pequeños) */
+@media (max-width: 480px) {
+    .text {
+        font-size: 12vw; /* Tamaño más grande en pantallas muy pequeñas */
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-color: #eee;
+}
+
+
+body, main, .menu__cuentos, ul,li, aside{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.header{
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6669;
+    border-radius: 12px;
+}
+
+.edit_logo{
+    color: #3498db;
+}
+.edit_logo-2{
+    color: #444;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.header nav{
+    margin-top: 12px;
+}
+
+.nav__item{
+    transition: background-color 0.3s, border-radius 0.24s;
+}
+
+.nav__item:hover{
+
+    background-color:#3498db33 ;
+    border-radius: 4px;
+    padding: 4px;
+
+}
+
+header a{
+    text-decoration: none;
+    color: #78b8ec;
+}
+
+main{
+    flex-grow: 1;
+}
+
+
+
+.patitoFeo{
+
+    padding: 30px;
+    text-align: center;
+    min-height: 80vh;
+    
+}
+
+/*----------- 1 PICTOGRAMA ---------------*/
+
+.patitoFeo__container1pictograma{
+    container-name: pictograma1;
+    container-type: inline-size;
+}
+
+.patitoFeo__page--1pictograma{
+    background-color: #fff;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 80vh;
+    gap: 12px;
+    padding: 10px;
+}
+
+.patitoFeo__page--1pictograma-items img{
+    max-width: 100%;
+}
+
+.patitoFeo__page--1pictograma-items:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/*----------- 1 PICTOGRAMA ENDS ---------------*/
+
+/*----------- 1 PICTOGRAMA QUERIES ------------*/
+
+@container pictograma1 (min-width: 500px){
+
+    .patitoFeo__container1pictograma{
+        container-name: pictograma1;
+        container-type: inline-size;
+    }
+    
+    .patitoFeo__page--1pictograma{
+        background-color: #fff;
+        border-radius: 12px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 200px;
+        margin: auto;
+        gap: 12px;
+        padding: 30px;
+    }
+    
+    .patitoFeo__page--1pictograma-items img{
+        max-width: 100%;
+    }
+
+    .patitoFeo__page--1pictograma-items:first-child{
+        align-self: center;
+    }
+    
+    .patitoFeo__page--1pictograma-items:last-child{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 35px;
+    }
+
+}
+
+@container pictograma1 (min-width: 1100px){
+
+    .patitoFeo__container1pictograma{
+        container-name: pictograma1;
+        container-type: inline-size;
+    }
+    
+    .patitoFeo__page--1pictograma{
+        background-color: #fff;
+        border-radius: 12px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 100px;
+        margin: auto;
+        gap: 12px;
+        padding: 30px;
+    }
+    
+
+
+    .patitoFeo__page--1pictograma-items img{
+        max-width: 100%;
+    }
+
+    .patitoFeo__page--1pictograma-items:first-child{
+        align-self: center;
+    }
+    
+    .patitoFeo__page--1pictograma-items:last-child{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 35px;
+    }
+
+}
+
+.patitoFeo h2{
+    margin: 30px 0;
+    font-weight: 400;
+    font-size:40px
+}
+
+/*----------- 1 PICTOGRAMA QUERIES ENDS ------------*/
+
+/*----------- 2 PICTOGRAMA -------------------------*/
+
+.patitoFeo__container2pictograma{
+    container-name: pictograma2;
+    container-type: inline-size;
+}
+
+
+.patitoFeo__page--2pictograma{
+    background-color: #fff;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 100px;
+    min-height: 80vh;
+    gap: 12px;
+    max-width: 1100px;
+    width: 100%;
+    padding: 10px;
+}
+
+.patitoFeo__page--2pictograma-items img{
+    max-width: 80%;
+}
+
+.patitoFeo__page--2pictograma-items:last-child{
+    font-weight: 600;
+}
+/*----------- 2 PICTOGRAMA ENDS-------------------------*/
+
+/*----------- 2 PICTOGRAMA QUERIES -----------*/
+
+@container pictograma2 (min-width: 500px){
+
+    .patitoFeo__page--2pictograma{
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 150px;
+        grid-template-areas: 
+        "pictograma1 pictograma2"
+        "oracion oracion";
+        margin: auto;
+    }
+
+    .patitoFeo__page--2pictograma-items:first-child{
+        grid-area: pictograma1;
+    }
+    .patitoFeo__page--2pictograma-items:nth-child(2){
+        grid-area: pictograma2;
+    }
+    .patitoFeo__page--2pictograma-items:last-child{
+        grid-area: oracion;
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+}
+
+@container pictograma2 (min-width: 1100px){
+
+    .patitoFeo__page--2pictograma-items:first-child{
+        align-self: center;
+    }
+    .patitoFeo__page--2pictograma-items:nth-child(2){
+        align-self: center;
+    }
+}
+
+/*----------- 2 PICTOGRAMA QUERIES ENDS -----------*/
+
+/*----------- 3 PICTOGRARMA -------------*/
+
+.patitoFeo__container3pictograma{
+    container-name: pictograma3;
+    container-type: inline-size;
+}
+
+.patitoFeo__page--3pictograma{
+    border-radius: 12px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 100px;
+    grid-template-areas:
+    "pictograma1 pictograma2"
+    "pictograma3 pictograma3"
+    "oracion oracion";
+    gap: 12px;
+    background-color: #fff;
+    min-height: 80vh;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.patitoFeo__page--3pictograma-items img{
+    max-width: 100%;
+}
+
+.patitoFeo__page--3pictograma-items:first-child{
+    grid-area: pictograma1;
+}
+
+.patitoFeo__page--3pictograma-items:nth-child(2){
+    grid-area: pictograma2;
+}
+
+.patitoFeo__page--3pictograma-items:nth-child(3){
+    grid-area: pictograma3;
+    width: 114px;
+    justify-self: center;
+}
+
+.patitoFeo__page--3pictograma-items:last-child{
+    grid-area: oracion;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+/*----------- 3 PICTOGRARMA ENDS -------------*/
+/*----------- 3 PICTOGRAMA QUERIES ------------*/
+
+@container pictograma3 (min-width: 500px){
+
+    .patitoFeo__page--3pictograma-items:first-child{
+
+        justify-self: center;
+        width: 250px;
+
+    }
+    
+    .patitoFeo__page--3pictograma-items:nth-child(2){
+        justify-self: center;
+        width: 250px;
+
+
+    }
+    
+    .patitoFeo__page--3pictograma-items:nth-child(3){
+        grid-area: pictograma3;
+        width: 250px;
+        justify-self: center;
+    }
+    
+    .patitoFeo__page--3pictograma-items:last-child{
+        grid-area: oracion;
+        font-weight: 600;
+        font-size: 35px;
+        align-self: center;
+    }
+    
+}
+
+@container pictograma3 (min-width: 1100px){
+    .patitoFeo__page--3pictograma{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 100px;
+        grid-template-areas: 
+        "pictograma1 pictograma2 pictograma3"
+        "oracion oracion oracion"
+        ;
+    }
+
+    .patitoFeo__page--3pictograma-items:first-child{
+        align-self: center;
+    }
+    .patitoFeo__page--3pictograma-items:nth-child(2){
+        align-self: center;
+    }
+    .patitoFeo__page--3pictograma-items:nth-child(3){
+        align-self: center;
+    }
+    .patitoFeo__page--3pictograma-items:nth-child(3){
+        font-size: 40px;
+    }
+}
+
+/*----------- 3 PICTOGRAMA QUERIES ENDS ------------*/
+
+@media screen and (max-width: 500px) {
+    .patitoFeo h2{
+        font-size: 30px;
+        text-wrap: balance;
+        margin: 20px 0;
+    }
+}
+
+@media screen and  (min-width: 600px){
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #6669;
+        border-radius: 12px;
+    }
+
+    .logo{
+        font-size: 35px;
+    }
+
+    .nav__item a{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+.titulo{
+    text-align: center;
+    margin-left: 2em;
+}
+.caperucita{
+    
+}

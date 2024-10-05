@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+h2{
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    color: #067d21;
+    text-align: center;
+}
+/* Header */
+.header-container {
+    padding: 20px;
+}
+
+.header-container h1 {
+    margin: 0.5em 0;
+}
+
+.text {
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 6vw;
+    background-image: linear-gradient(var(--angle), hotpink, indigo);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move 4s linear alternate infinite;
+}
+
+@keyframes move {
+    0% {
+        --angle: 0.25turn;
+    }
+
+    100% {
+        --angle: 0.75turn;
+    }
+}
+
+/* Media query for medium screens (tablets) */
+@media (max-width: 1024px) {
+    .text {
+        font-size: 8vw;
+    }
+}
+
+/* Media query for small screens (smartphones) */
+@media (max-width: 768px) {
+    .text {
+        font-size: 10vw;
+    }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+    .text {
+        font-size: 12vw;
+    }
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+    font-size: 30px;
+    color: #740420;
+    font-family: Jost, sans-serif;
+    transition: font-size 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 40px;
+}
+
+.nav-item.divider {
+    color: #333;
+    padding: 0 10px;
+}
+
+.nav-item.divider::before {
+    content: '|';
+    color: #333;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+/* Juego de Emparejar Emociones */
+.game-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.matching-game {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos para las zonas de destino */
+.game-drop-zone {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.game-drop-zone p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos para las caras (elementos arrastrables) */
+.game-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: grab;
+}
+
+/* Efecto al arrastrar */
+.game-drop-zone:hover {
+    background-color: #ddd;
+}
+
+/* Responsive para el juego */
+@media (max-width: 768px) {
+    .matching-game {
+        flex-direction: column;
+    }
+
+    .game-item img, .game-drop-zone {
+        width: 120px;
+        height: 120px;
+    }
+
+    .game-drop-zone p {
+        font-size: 16px;
+    }
+}
+.game-area {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+/* Estilos para las listas de emociones y caras */
+.emotion-list, .face-list {
+    margin: 10px 0; /* Espacio vertical entre las listas */
+}
+
+/* Estilo para las emociones */
+.emotion {
+    margin: 5px 0; /* Espacio entre las emociones */
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #a26d6d95; /* Color de fondo ligero */
+    cursor: pointer; /* Cambia el cursor al pasar sobre las emociones */
+}
+
+/* Estilo para las caras */
+.face {
+    width: 100px; /* Ancho fijo para las caras */
+    margin: 5px; /* Margen entre las imágenes */
+    cursor: grab; /* Cambia el cursor al pasar sobre las caras */
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 600px) {
+    .game-area {
+        flex-direction: row; /* Cambia a fila en pantallas grandes */
+        justify-content: space-between; /* Espacio entre listas */
+    }
+
+    .emotion-list, .face-list {
+        width: 45%; /* Cada lista ocupa el 45% del espacio */
+    }
+
+    h1 {
+        text-align: center; /* Asegúrate de que el título esté centrado */
+    }
+  
+}
+
+/* Estilo para el botón de reiniciar */
+#reiniciar {
+    align-items: center;
+    margin: 20px auto;
+    margin-top: 20px; /* Margen superior para el botón */
+    padding: 10px 20px; /* Relleno del botón */
+    background-color: #7b00ff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#reiniciar:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+}
+.reiniciar{
+    text-align: center;
+}
+#resultado {
+    text-align: center;
+    margin-top: 20px; /* Espacio superior para el resultado */
+    font-size: 1.2em; /* Tamaño de fuente del resultado */
+}

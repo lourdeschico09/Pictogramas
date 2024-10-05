@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Página para Niños</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="diseño.css"> <!-- Hoja de estilos separada -->
+</head>
+
+<!-- Encabezado -->
+<header class="text-center p-4 bg-light">
+    <h1 CLASS="text">¡Aprendiendo Juntos!</h1>
+    <h1>Aprende y juega mientras exploras cuentos y emociones.</h1>
+
+</header>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item divider">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuentos/cuentos.html">Cuentos</a>
+                    </li>
+                    <li class="nav-item divider">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pictogramas/pictogramas/emparejar.html">Emociones</a>
+                    </li>
+                    <li class="nav-item divider">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reglas-de-convivencia/reglas-de-convivencia/index.html">Reglas de
+                            Convivencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel de Cuentos -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4"><a href="cuentos/index.html">CUENTOS</a></h2>
+        <div id="cuentosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="cuentos/img/3 chanchitos/pictogramas/portada.png" class="d-block w-100" alt="Cuento 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>LOS TRES CHANCHITOS</h5>
+                        <a href="cuentos/Mas Cuentos/tresCerditos.html" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="cuentos/img/Pajarito amarillo/pajarito.png" class="d-block w-100" alt="Cuento 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>PAJARITO AMARILLO</h5>
+                        <a href="cuentos/Mas Cuentos/pajaritoAmarillo.html" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="cuentos/img/Rana pirata/portada.png" class="d-block w-100" alt="Cuento 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>RANA PIRATA</h5>
+                        <a href="cuentos/Mas Cuentos/ranaPirata.html" class="btn btn-primary">LEER</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#cuentosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cuentosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección de Emociones -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4"><a href="emociones.html">Conociendo las Emociones</a></h2>
+        <div class="row text-center">
+            <div class="col-12 col-md-4 mb-3">
+                <img src="alegria.jpg" alt="Felicidad" class="img-fluid">
+                <h4>Felicidad</h4>
+                <p>Aprende a identificar cuando te sientes feliz y por qué.</p>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <img src="Tristeza.jpg" alt="Tristeza" class="img-fluid">
+                <h4>Tristeza</h4>
+                <p>Entiende la tristeza y cómo puedes sentirte mejor.</p>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <img src="Furia.jpg" alt="Enojo" class="img-fluid">
+                <h4>Enojo</h4>
+                <p>Aprende a manejar el enojo de manera positiva.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Normas de Convivencia -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Normas de Convivencia</h2>
+        <div class="row text-center">
+            <div class="col-12 col-md-4 mb-3">
+                <img src="norma_escuchar.png" alt="Escuchar" class="img-fluid">
+                <h4>Escuchar</h4>
+                <p>Escucha con atención a los demás para entender lo que dicen.</p>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <img src="norma_compartir.png" alt="Compartir" class="img-fluid">
+                <h4>Compartir</h4>
+                <p>Comparte tus cosas con los demás para jugar juntos.</p>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <img src="norma_respetar.png" alt="Respetar" class="img-fluid">
+                <h4>Respetar</h4>
+                <p>Respeta los sentimientos y las ideas de los demás.</p>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- Footer -->
+<footer class="text-center p-3 bg-dark text-light">
+    <p>© 2024 Alumnos de 3° de Desarrollo de Software- ISSC - Todos los derechos reservados</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
+
+
